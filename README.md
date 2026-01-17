@@ -1,2 +1,46 @@
-# lfl-rooms
-Management application of your little free library multi user version.
+# LFL Rooms - 本棚OCRスキャナー
+
+スマートフォンやPCから本棚の写真をアップロードし、背表紙の文字をTesseract.jsでOCRして書籍情報をJSON化する静的Webアプリです。すべてクライアント側で完結し、画像は外部に送信されません。
+
+## デモ
+GitHub Pages で `main` ブランチの `/index.html` を公開して利用できます。
+
+## 主な機能
+- 画像アップロード（ファイル選択 / カメラ撮影）
+- OCR進行状況の表示
+- 抽出された書籍情報のカード表示
+- JSONダウンロード
+
+## 使い方
+1. `index.html` を開きます。
+2. 「画像を選択する」ボタンから本棚写真をアップロードします。
+3. OCRが完了すると書籍情報が表示されます。
+4. 「JSONをダウンロード」ボタンで `books.json` を保存できます。
+
+## GitHub Pages で公開する方法
+1. GitHub リポジトリの **Settings** を開きます。
+2. **Pages** に移動します。
+3. **Branch** を `main`、`/(root)` を選択して保存します。
+4. 数分後に表示されるURLにアクセスします。
+
+## 構成ファイル
+- `index.html`：アプリ本体
+- `style.css`：カスタムスタイル
+- `script.js`：OCRロジック
+- `books.json`：JSON出力テンプレート
+
+## 注意事項
+- OCRの精度は画像の品質に依存します。
+- 試用・展示用のMVPとして提供しています。
+
+## トラブルシューティング
+### 「Failed to create PR」と表示される場合
+以下を順番に確認してください。
+- 変更がすべてコミットされているか確認する。
+- リモートリポジトリが正しいURLになっているか確認する。
+- GitHubにサインイン済みで、権限があるアカウントか確認する。
+- ネットワーク接続やVPNなどの制限がないか確認する。
+
+## ライセンス
+MIT License
+books.json
